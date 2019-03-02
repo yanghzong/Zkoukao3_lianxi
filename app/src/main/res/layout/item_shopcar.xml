@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/shop_car_del"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_97"
+        android:background="#ff5e70"
+        android:text="删除"
+        android:textColor="#fff"
+        android:textSize="@dimen/sp_14"
+        android:paddingBottom="@dimen/dp_15"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_97"
+        android:layout_marginTop="@dimen/dp_15"
+        >
+        <RelativeLayout
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_97"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_marginRight="@dimen/dp_5"
+            android:gravity="center_horizontal"
+            android:id="@+id/rv_ck">
+
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cb_dan"
+                android:layout_marginTop="@dimen/dp_5"/>
+        </RelativeLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_100"
+            app:cardCornerRadius="@dimen/dp_10"
+            app:cardElevation="@dimen/dp_5"
+            android:id="@+id/cv_view"
+            android:layout_toRightOf="@id/rv_ck"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_5"
+
+            >
+            <LinearLayout
+                android:id="@+id/tt"
+                android:layout_width="@dimen/dp_292"
+                android:layout_height="@dimen/dp_97"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_10"
+                android:layout_toRightOf="@id/cb_dan">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:id="@+id/shopcar_img" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_12"
+                        android:textColor="#666666"
+                        android:layout_weight="1"
+                        android:maxLines="2"
+                        android:id="@+id/shopcar_name"/>
+                    <RelativeLayout
+                        android:layout_alignParentBottom="true"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_below="@id/shopcar_name">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/shopcar_price"
+                            android:layout_alignParentBottom="true"
+                            android:textColor="#e72121"/>
+                        <com.example.zkoukao3_lianxi.selfview.AddDecreaseView
+                            android:id="@+id/shopcar_add"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp_10"
+                            />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+
+
+</com.daimajia.swipe.SwipeLayout>
